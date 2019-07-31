@@ -24,7 +24,7 @@ regressor = SVR()
 regressor.fit(X_train, y_train)
 y_pred = regressor.predict(X_train)
 
-regressor.predict(sc_X.fit_transform(6.5))
+sc_y.inverse_transform(regressor.predict(sc_X.fit_transform(6.5)))
 
 pt.scatter(X_train, y_train)
 pt.plot(X_train, y_pred) 
